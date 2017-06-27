@@ -1,0 +1,12 @@
+<h1>지난글</h1>
+<% @every_post.each do |p|%>
+    제목 : <%= p.title %> <br>
+    내용 : <%= p.content %>
+    <%= p.created_at %>
+    <a href="/delete/<%= p.id %>">[삭제]</a>
+    <a href="/update_view/<%= p.id %>">[수정]</a>
+<hr>
+
+
+<% end %>
+<a href="/">글쓰기</a>
